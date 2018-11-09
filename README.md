@@ -1,2 +1,2 @@
 # spiders
-Various web crawlers written in python
+用Python写的各种爬虫。
