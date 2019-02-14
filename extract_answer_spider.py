@@ -16,9 +16,7 @@
  
 @Desc    :   提取考试题目和答案的脚本，省去人工复制粘贴的麻烦事。
              提取的实例文件可查看 ..\files\182次设计美学模拟练习报告.html
- 
 '''
-
 
 from bs4 import BeautifulSoup    # pip install beautifulsoup4
 import os
