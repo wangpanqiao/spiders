@@ -23,6 +23,8 @@ import os
 import docx    # pip install python-docx
 
 
+total_list = []  # 所有的题目，用于去重
+
 def get_answer(right_answer_node):
     '''提取答案'''
 
@@ -81,6 +83,12 @@ def extract_file(full_path, file_name):
             question_title = question_title_node.string
 
         question_title = question_title.strip()   # 题目
+
+        # 去掉重复的题目
+        if question_title in total_list:
+            continue
+        else:
+            total_list.append(question_title)
 
         answer_node = question_node.find_all("div", attrs={"class":"q-text"})
         abcd = answer_node[1].pre.string.strip()
