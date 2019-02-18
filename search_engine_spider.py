@@ -10,12 +10,12 @@
  
 @Software:   VS2017
  
-@File    :   extract_answer.py
+@File    :   search_engine_spider.py
  
-@Time    :   Feb 14,2019
+@Time    :   Feb 16,2019
  
-@Desc    :   提取考试题目和答案的脚本，省去人工复制粘贴的麻烦事。
-             提取的实例文件可查看 ..\files\182次设计美学模拟练习报告.html
+@Desc    :   搜索引擎结果提取，界面已简单完成
+
 '''
 
 from bs4 import *     # pip install beautifulsoup4
