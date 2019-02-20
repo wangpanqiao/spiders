@@ -12,7 +12,7 @@
  
 @File    :   mzywfyj_spider.py
  
-@Time    :   Feb 19,2019
+@Time    :   Feb 20,2019
  
 @Desc    :   中国民族语文翻译局，翻译爬虫，网址：http://www.mzywfy.org.cn/translate.jsp
  
@@ -25,6 +25,7 @@ import json
 
 
 def mzywfyj_translate(trans_text, trans_from, trans_to, trans_url):
+    '''翻译'''
 
     mzywfyj_url = "http://www.mzywfy.org.cn/ajaxservlet"
     data = {}
@@ -46,6 +47,7 @@ def mzywfyj_translate(trans_text, trans_from, trans_to, trans_url):
 
 if __name__ == "__main__":
 
+    # 可根据自己的情况设置好参数，然后调用方法 mzywfyj_translate()
     # 汉文 -> 维吾尔文
     trans_text = '你好'
     trans_from = 'zh'
