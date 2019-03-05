@@ -24,6 +24,7 @@ import docx    # pip install python-docx
 
 
 total_list = []  # 所有的题目，用于去重
+my_index  = 1       # 排序用
 
 def get_answer(right_answer_node):
     '''提取答案'''
@@ -68,6 +69,8 @@ def extract_file(full_path, file_name):
     topic = soup_global.find("div", attrs={"class":"part-title"}).string
     print(topic)
     content = topic + "\n"
+
+    new_content = "";   # 去重、排序后的内容
 
     question_node_list = soup_global.find_all("div", attrs={"class":"question"})
     for i in range(len(question_node_list)):
@@ -116,6 +119,7 @@ def extract_file(full_path, file_name):
             print(question_and_answer)
 
         content = content + question_and_answer + "\n"
+        new_content = question_and_answer + "\n"
 
         # 题目解析
         explain_node = question_node.find("div", attrs={"class":"q-text explain unselectable"})
@@ -123,6 +127,9 @@ def extract_file(full_path, file_name):
             explain_txt = explain_node.text.replace("\n","")
             print(explain_txt)
             content = content + explain_txt + "\n"
+            new_content = new_content + explain_txt + "\n"
+
+        write_file_append("all.txt", new_content)  # 全部写在一个文件，需要去重、排序
 
     write_file(txt_name, content)
 
@@ -149,6 +156,19 @@ def write_file(txt_name, content):
     doc.save(doc_name)
 
     print("\n")
+
+def write_file_append(txt_name, content):
+    '''全部写入一个文件'''
+
+    global my_index
+    dot_index = str.index(content,'.')
+    content = content[dot_index:]
+    content = str(my_index) + content
+    my_index += 1
+
+    f = open(txt_name, "a", encoding="utf-8")
+    f.write(content)
+    f.close()
 
 
 if __name__ == '__main__':
