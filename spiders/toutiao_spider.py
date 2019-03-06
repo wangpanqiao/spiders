@@ -24,6 +24,7 @@ from hashlib import md5
 from urllib.parse import urlencode
 from multiprocessing.pool import Pool
 
+
 def get_page(offset):
     '''爬取网页'''
 
@@ -44,6 +45,7 @@ def get_page(offset):
     except requests.ConnectionError:
         return None
 
+
 def get_image(json):
     '''爬取图片'''
 
@@ -60,6 +62,7 @@ def get_image(json):
                             'title':title
                             }
 
+
 def save_image(item):
     '''保存图片'''
 
@@ -68,14 +71,15 @@ def save_image(item):
     try:
         resp = requests.get(item.get('image'))
         if resp.status_code == 200:
-            file_path = '{0}/{1}.{2}'.format(item.get('title'),md5(resp.content).hexdigest(),'jpg')
+            file_path = '{0}/{1}.{2}'.format(item.get('title'), md5(resp.content).hexdigest(), 'jpg')
             if not os.path.exists(file_path):
-                with open(file_path,'wb') as f:
+                with open(file_path, 'wb') as f:
                     f.write(resp.content)
             else:
-                print('Already Downloaded',file_path)
+                print('Already Downloaded', file_path)
     except requests.ConnectionError:
         print('File to save image.')
+
 
 def main(offset):
     '''主流程'''
@@ -90,7 +94,7 @@ GROUP_END = 20
 
 if __name__ == '__main__':
     pool = Pool()
-    groups = ([x * 20 for x in range(GROUP_START,GROUP_END + 1)])
-    pool.map(main,groups)
+    groups = ([x * 20 for x in range(GROUP_START, GROUP_END + 1)])
+    pool.map(main, groups)
     pool.close()
     pool.join()
