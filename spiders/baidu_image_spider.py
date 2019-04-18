@@ -98,6 +98,12 @@ if __name__ == "__main__":
             img_urls.append(item)
 
     print("共有 {} 张图片需要下载。".format(len(img_urls)))
+    
+    if not os.path.exists(key_word):
+        try:
+            os.mkdir(key_word)   # 多线程调用可能抛异常，最好放到前面创建路径
+        except Exception as ex:
+            pass
 
     # 多线程下载
     queue = Queue()   # Create a queue to communicate with the worker therads
@@ -111,31 +117,3 @@ if __name__ == "__main__":
 
     queue.join()  # 等待队列完成所有的任务
     print('下载完成，去欣赏吧。')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

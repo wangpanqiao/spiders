@@ -10,7 +10,7 @@
  
 @Software:   VS2017
  
-@File    :   baidu_image_spider.py
+@File    :   process_worker.py
  
 @Time    :   Apr 17,2019
  
@@ -34,25 +34,37 @@ class ProcessWorker(Thread):   # 这个类还不能放在前面，不然会报�
             save_pic(url, self.key_word)
 
 
-num = 1
-
 def save_pic(url, key_word):
     '''保存图片'''
-    print(url)
-    global num
+    #print(url)
+    name = os.path.basename(url)
+    
+    #只有名字的   + .jpg
+    #如果包含 .jpg 但不以 jpg结尾 + .jpg
+    #如果包含 .jpeg 但不以 jpg结尾 + .jpg
+    #如果包含 .png 但不以 png结尾 + .png
+    if '.' not in name:
+        name += '.jpg'
+    elif '.jpg' in name and not name.endswith('.jpg'):
+        name += '.jpg'
+    elif '.jpeg' in name and not name.endswith('.jpeg'):
+        name += '.jpg'
+    elif '.png' in name and not name.endswith('.png'):
+        name += '.png'
 
-    if not os.path.exists(key_word):
-        os.mkdir(key_word)
-
-    name = str(num) + '.jpg'
     path = "{0}/{1}".format(key_word, name)
+    if os.path.exists(path):
+        print('已存在： ' + path)
+        return  # 如果文件已存在，则不用再次下载
     
     try:
         resp = requests.get(url, timeout=3)
-        num += 1
         if resp.status_code == 200:
             data = resp.content
             with open(path, 'wb') as f:
                 f.write(data)
+                print('已下载： ' + path)
     except Exception as ex:
-        print(ex.args)
+        print('下载失败： ' + name)
+        #print(ex.args)
+        pass
