@@ -4,7 +4,7 @@
 '''
 @Author  :   Anuo.
  
-@License :   (C) Copyright 2018, Anuo's Studio
+@License :   (C) Copyright 2010, Anuo's Studio
  
 @Contact :   188512936@qq.com
  
