@@ -4,7 +4,11 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>50674058-bda7-4c71-a86c-9eec09737a86</ProjectGuid>
     <ProjectHome>.</ProjectHome>
+<<<<<<< HEAD
     <StartupFile>wechat_talker.py</StartupFile>
+=======
+    <StartupFile>baidu_image_spider.py</StartupFile>
+>>>>>>> d24e1fb7081a92c330050823aa64ada7c67b00b0
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -27,6 +31,9 @@
     <Compile Include="7160_spider_multi_thread.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="baidu_image_spider.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="extract_answer_spider.py" />
     <Compile Include="meizhuo_spider.py" />
     <Compile Include="baidu_tupian_spider.py">
@@ -37,6 +44,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="niutrans_spider.py" />
+    <Compile Include="process_worker.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="search_engine_spider.py" />
     <Compile Include="taobao_spider.py" />
     <Compile Include="toutiao_spider.py" />

@@ -1,0 +1,1608 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title> 182次设计美学模拟练习报告 </title>
+    <base href="https://cuit.101test.com/">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords"
+      content="考试系统,在线考试系统,网上考试系统,手机考试系统,防作弊考试系统,企业考试系统,微信考试系统,在线考试,资格证模考,模考试卷/题库,知识竞赛系统,校园招聘考试,电子作业系统云平台">
+<meta name="description"
+      content="百一测评是亚信科技(中国)旗下强大的免费的考试系统。其庞大的用户群包括：[一]企业事业类：校园招聘大规模在线笔试、员工考核、人才职业测评，能力测评，技能测评；[二]学校类：K12电子作业平台、技工学校技能评测、高校知识竞赛；[三]资格证模考：在线模考试卷、资格证题库等。同时支持手机考试、电脑考试的企业级考试平台和在线考试系统。">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<script type="text/javascript" src="../../../lib/qrcodejs/qrcode.js"></script>
+<link rel="bookmark"
+      href="http://101test-private.oss-cn-beijing.aliyuncs.com/company/logo/null/nca061EXflOl25VVZnpZCGT555jF9bRh_1493177048307%40140w_140h.png?Expires=9223372036854775&amp;OSSAccessKeyId=YvDPojSAo3YgjMXF&amp;Signature=NycuJrRzAvmkUODF%2BSPi2LxdcJY%3D">
+<link rel="shortcut icon"
+      href="http://101test-private.oss-cn-beijing.aliyuncs.com/company/logo/null/nca061EXflOl25VVZnpZCGT555jF9bRh_1493177048307%40140w_140h.png?Expires=9223372036854775&amp;OSSAccessKeyId=YvDPojSAo3YgjMXF&amp;Signature=NycuJrRzAvmkUODF%2BSPi2LxdcJY%3D">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!--[if IE]>
+<script>window.IS_IE = true;</script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script src="/core/es5-shim.min.js"></script>
+<script src="/core/respond.min.js"></script>
+<p class="browsehappy alert alert-warning tc">
+    你正在使用一个<strong>过时</strong>的浏览器。请<a class="link" target="_blank" href="http://browsehappy.com">升级你的浏览器</a>以查看此页面。</p>
+</p>
+<![endif]-->
+<!--[if lt IE 10]>
+<script src="/core/requestAnimationFrame.js"></script>
+<![endif]-->
+
+
+        <script>
+        window.SETS = {
+                params: JSON.parse('{\"sign\":\"xzj51aQ9m-pQ07Ej8ObVyA\",\"employerId\":\"443425\",\"sync\":\"true\",\"reportThreshold\":\"14\",\"expiredAt\":\"1582871268226\",\"url\":\"\/reportDetail\/37121673?sync=true&reportThreshold=14\"}') || {},
+                request: JSON.parse('{\"pageType\":\"4\",\"testId\":\"37121673\"}') || {},
+                user: {
+            login: false // 未登录!
+        },
+                company: {},
+                env: {
+                        isCompanyDomain: true,
+                        loginType: 2,
+                        root: "https://cuit.101test.com/"
+        },
+                local: {}
+    };
+
+                    window.SETS.user = JSON.parse('{\"employerId\":567280,\"registerType\":2,\"employerType\":2,\"employerName\":\"034\u9093\u601D\u5609\",\"companyId\":0,\"belongId\":17578,\"username\":\"034RLB012509400368\",\"password\":\"Xxf8KtBqfXwxQ2Klkt2BVlSpN48Q8F7eCYYoHNEj8DZWx7rRbtNJsDTUKO-eLpNT7H2__h2Gcj5m45mjw7ZNVQ\",\"state\":1,\"createDate\":1525762299000,\"authorities\":\"ROLE_USER\",\"features\":0,\"vipMode\":0,\"createdBy\":557201,\"regionSyncFlag\":true}') || {};
+                window.SETS.user.login = true;
+                window.SETS.user.isCompanyAdmin = false;
+                window.SETS.user.isCompanyUser = false;
+                window.SETS.user.isVip = false;
+                window.SETS.user.isVipOrCompanyUser = window.SETS.user.isVip || window.SETS.user.isCompanyUser;
+        window.SETS.user.inviteCode = 'ALXV6N';
+    
+                window.SETS.company = JSON.parse('{\"companyId\":17578,\"companyName\":\"\u6210\u90FD\u4FE1\u606F\u5DE5\u7A0B\u5927\u5B66\u81EA\u5B66\u8003\u8BD5\u5B66\u4E60\u670D\u52A1\u4E2D\u5FC3\",\"companyLogo\":\"http:\/\/101test-private.oss-cn-beijing.aliyuncs.com\/company\/logo\/null\/wQ2Pmc1lQxZif6JlAxh1iUi5K7NveU1R_1493195067113%40140w_140h.jpg?Expires=9223372036854775&OSSAccessKeyId=YvDPojSAo3YgjMXF&Signature=%2BO\/weQ4sXVciEvXLo74LnNvBnw8%3D\",\"companyState\":1,\"registerDate\":1493173976000,\"managerId\":132391,\"content\":\"{\\\"menuConfig\\\":\\\"acd|dbe\\\",\\\"icp\\\":\\\"\\\",\\\"psp\\\":\\\"\\\",\\\"companyBg\\\":\\\"https:\/\/101test-private.oss-cn-beijing.aliyuncs.com\/company\/logo\/null\/B13s9U6xAbpqeV74myhDaJ7KPrXtfiHH_1541483382310%40140w_140h.jpg?Expires\\\\u003d9223372036854775\\\\u0026OSSAccessKeyId\\\\u003dYvDPojSAo3YgjMXF\\\\u0026Signature\\\\u003d14XidxkafLlx4Hb9A2p1P3BJLjQ%3D\\\",\\\"companyMBg\\\":\\\"http:\/\/101test-private.oss-cn-beijing.aliyuncs.com\/company\/logo\/null\/qEdC3ZhPFmIiY1kd3slsbOJafew3G69T_1495068837588%40140w_140h.jpg?Expires\\\\u003d9223372036854775\\\\u0026OSSAccessKeyId\\\\u003dYvDPojSAo3YgjMXF\\\\u0026Signature\\\\u003dKLSPcpBMDSZ7uUUDgDWqdptHc7M%3D\\\",\\\"companyIcon\\\":\\\"http:\/\/101test-private.oss-cn-beijing.aliyuncs.com\/company\/logo\/null\/nca061EXflOl25VVZnpZCGT555jF9bRh_1493177048307%40140w_140h.png?Expires\\\\u003d9223372036854775\\\\u0026OSSAccessKeyId\\\\u003dYvDPojSAo3YgjMXF\\\\u0026Signature\\\\u003dNycuJrRzAvmkUODF%2BSPi2LxdcJY%3D\\\",\\\"showCopyright\\\":true,\\\"examFooter\\\":\\\"\u7B54\u9898\u4E2D\u9047\u5230\u95EE\u9898\u8BF7\u62E8\u6253\u5BA2\u670D\u7535\u8BDD\u6216\u53D1\u90AE\u4EF6\\\",\\\"companyTitle\\\":\\\"\u6210\u90FD\u4FE1\u606F\u5DE5\u7A0B\u5927\u5B66\u81EA\u5B66\u8003\u8BD5\u5B66\u4E60\u670D\u52A1\u4E2D\u5FC3\u5728\u7EBF\u4F5C\u4E1A\u7CFB\u7EDF\\\"}\",\"domainName\":\"cuit.101test.com\",\"belongId\":17578,\"perm\":112,\"customShare\":false}') || {};
+                window.SETS.company.displayCopyright = true;
+        if (window.SETS.company.content) {
+            window.SETS.company.contentObj = JSON.parse(window.SETS.company.content);
+        }
+            window.showBlackBar = false
+</script>    <script>
+        window["webpackManifest"] = {"0":"0.1c50b.js","1":"1.f9de7.js","3":"vendor.5d63d.js","4":"report-detail.abe64.js","5":"paper-print.82b2c.js","6":"company-store-home.84a5a.js","7":"store-single-question.fab20.js","8":"my-demo.7709d.js"}
+    </script>
+            
+                    <link rel="stylesheet" href="/dist/lib.cba36.css">
+        <link rel="stylesheet" href="/dist/vendor.06453.css">
+        <link rel="stylesheet" href="/dist/report-detail.33547.css">
+    </head>
+<body v-cloak>
+                        <script>window.SETS.local = JSON.parse('{\u0022self\u0022:false}') || {};</script>
+        <div class="print-alert" v-el:print-alert>
+        提示 : 请使用下载按钮导出报告
+    </div>
+    <div class="container report-detail-wrapper pure-pre print" v-el:report-wrap>
+        <div class="row">
+                                        <div class=" col-md-12 p0">
+                    <div class="panel panel-default mb0">
+                        <div class="panel-body">
+                                                                                            <div class="report-basic" id="report-basic">
+        <h3 class="tc fn report-title" v-pre>182次设计美学模拟练习报告</h3>
+    <div class="head-info">
+        <img class="avator" src="assets/img/report/portrait_default.png">
+        <div class="info-wrapper">
+            <div class="name-wrapper" v-pre>034邓思嘉</div>
+            <div>
+                学号 <span v-pre>034RLB012509400368</span>
+                            </div>
+        </div>
+                <report-detail-score class="score-wrapper" :score="19.0" :un-scored="13"></report-detail-score>
+    </div>
+
+        
+        <report-detail-remark content=""></report-detail-remark>
+
+        </div>                                                                                                                                                                                            <div class="report-summary" id="report-summary">
+    <div class="section-title">全面概括||</div>
+    <p class="pb5 f16">试卷共 33 道题，考生共答 24 道题</p>
+    <a @click="anchorTo('report-logs')" class="btn btn-link p0">
+        <i class="fa fa-clock-o"></i>
+        考试时间 2018-10-19 22:26&emsp;至
+        &emsp;2018-10-20 00:26    </a>
+        
+        <report-detail-summary :model="[{&quot;partName&quot;:&quot;单选题&quot;,&quot;partSkills&quot;:[{&quot;skillName&quot;:&quot;常识&quot;,&quot;count&quot;:20,&quot;eCount&quot;:1,&quot;point&quot;:20.0,&quot;score&quot;:19.0,&quot;root&quot;:true,&quot;questionTypeDesc&quot;:&quot;单选题&quot;}],&quot;partQuestions&quot;:[{&quot;title&quot;:&quot;&lt;pre&gt;波普艺术最早诞生在【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;德国&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;英国&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;美国&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;意大利&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;B&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;B&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482737,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:1,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:5,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[0,1,2,3]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false},{&quot;title&quot;:&quot;&lt;pre&gt;海报《红楔子攻打白色》的设计者是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;奥里斯&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;诺伊&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;艾尔·利兹斯基&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;略特&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;C&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;C&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482733,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:2,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:2,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[2,0,3,1]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false},{&quot;title&quot;:&quot;&lt;pre&gt;获得“意大利学院艺术奖”巴黎建筑学院金奖的是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;逻顺德斯&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;庞蒂&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;希伯斯利&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;杜斯伯格&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;B&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;B&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482743,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:3,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:6,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[1,2,3,0]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false},{&quot;title&quot;:&quot;&lt;pre&gt;文艺复兴运动吹响了哪国现代科技革命号角？【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;英国&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;美国&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;意大利&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;德国&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;C&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482731,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:4,&quot;score&quot;:0.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:5,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[1,2,3,0]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false},{&quot;title&quot;:&quot;&lt;pre&gt;流线型设计产品外形主要形式是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;圆滑流畅&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;波浪线&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;直线&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;斜线&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482734,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:5,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:4,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[1,3,0,2]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false},{&quot;title&quot;:&quot;&lt;pre&gt;中国现代设计教育的萌发点是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;工人运动&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;洋务运动&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;农民起义&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;戊戌变法&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;B&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;B&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482736,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:6,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:3,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[1,0,2,3]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false},{&quot;title&quot;:&quot;&lt;pre&gt;德国“电动汽车之父”是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;拉斯金&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;弗兰克·皮克&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;艾尔·利兹期基&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;斐迪南·保时捷&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;D&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;D&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482726,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:7,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:2,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[2,1,0,3]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false},{&quot;title&quot;:&quot;&lt;pre&gt;最早提出后现代主义概念的是美国建筑家罗伯特·文丘里，并提出【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;“少则厌烦”的观念&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;“多则少”的观念&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;“多则厌烦”的观念&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;“少则多”的观念&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482728,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:8,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:11,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[0,3,2,1]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false},{&quot;title&quot;:&quot;&lt;pre&gt;20世纪80年代中期，我国学界掀起了一场全国性的工业设计即【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;“认识运动”&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;“工人运动”&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;“艺术运动”&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;“设计运动”&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482742,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:9,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:8,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[0,1,3,2]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false},{&quot;title&quot;:&quot;&lt;pre&gt;1927年为巴塞罗那大展德国馆设计“巴塞罗那椅”的作者是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;米斯·凡·德·罗&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;里内拉&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;布尔达里&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;德里达&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482735,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:10,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:4,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[0,3,1,2]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false},{&quot;title&quot;:&quot;&lt;pre&gt;欧洲设计体系的主要特征是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;样式主义&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;功能主义&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;形式主义&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;精神主义&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;B&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;B&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482730,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:11,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:3,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[2,3,0,1]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false},{&quot;title&quot;:&quot;&lt;pre&gt;1930年迈耶不得不辞职离开包豪斯是因为他的【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;艺术欣赏&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;政治立场&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;个人&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;设计能力&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;B&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;B&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482740,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:12,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:2,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[0,3,2,1]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false},{&quot;title&quot;:&quot;&lt;pre&gt;1926年包豪斯的校名里增加了一个副标题即【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;设计学院&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;美术学院&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;设计院&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;艺术院校&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482727,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:13,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:3,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[0,3,2,1]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false},{&quot;title&quot;:&quot;&lt;pre&gt;荷兰“风格派”的核心人物是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;毕达哥拉斯&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;柏拉图&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;蒙德里安&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;亚里士多德&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;C&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;C&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482725,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:14,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:2,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[3,0,1,2]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false},{&quot;title&quot;:&quot;&lt;pre&gt;20世纪90年代人类开始进入【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;信息化社会时代&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;艺术设计时代&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;时尚时代&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;社会发展时代&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482741,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:15,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:2,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[1,0,3,2]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false},{&quot;title&quot;:&quot;&lt;pre&gt;被报界惊呼为世界上最有意义、最美丽的博物馆是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;英国国家博物馆&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;向日葵博物馆&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;大地艺术博物馆&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;古根海姆博物馆&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;D&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;D&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482729,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:16,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:2,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[1,0,3,2]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false},{&quot;title&quot;:&quot;&lt;pre&gt;对现代设计影响最大的现代艺术家是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;弗兰克·盖里&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;普里兹克&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;金兹堡&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;毕加索&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;D&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;D&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482738,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:17,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:3,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[2,3,1,0]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false},{&quot;title&quot;:&quot;&lt;pre&gt;最早实行工业设计师登记制度的国家是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;意大利&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;德国&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;英国&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;美国&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;C&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;C&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482739,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:18,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:3,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[3,0,1,2]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false},{&quot;title&quot;:&quot;&lt;pre&gt;反“有计划的商品废止制”代表人物是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;埃德加·考夫曼&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;希达达尔&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;德尔谩夫&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;马克斯·比尔&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482744,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:19,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:6,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[1,2,0,3]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false},{&quot;title&quot;:&quot;&lt;pre&gt;1750年 《美学》一书的作者是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;里特维德&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;马克思&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;鲍姆伽通&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;阿尔文·托夫勒&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;C&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;C&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482732,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:20,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:3,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[3,1,0,2]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false}],&quot;count&quot;:20,&quot;score&quot;:19.0,&quot;point&quot;:20.0,&quot;partIndex&quot;:0},{&quot;partName&quot;:&quot;名词解释&quot;,&quot;partSkills&quot;:[{&quot;skillName&quot;:&quot;常识&quot;,&quot;count&quot;:5,&quot;eCount&quot;:5,&quot;point&quot;:20.0,&quot;score&quot;:0.0,&quot;root&quot;:true,&quot;questionTypeDesc&quot;:&quot;问答题&quot;}],&quot;partQuestions&quot;:[{&quot;title&quot;:&quot;&lt;pre&gt;整体性设计&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;指设计并不仅只是对某一件产品进行设计，而是包括生产企业的品牌形象的树立和推广设计、系列产品设计、包装设计、营销策划设计以及相关环境设计等内容。&quot;},&quot;candAnswer&quot;:{&quot;textAnswer&quot;:&quot;指的是不是单一的产品设计，还有生产厂家的设计，营销手法的设计，以及使用环境的一系列设计&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482745,&quot;partSeq&quot;:2,&quot;questionSeq&quot;:1,&quot;point&quot;:4.0,&quot;answerTime&quot;:80,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;},{&quot;title&quot;:&quot;&lt;pre&gt;风格派&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;是一群拥有相似美学观念的艺术家们在1917年到1931年间以荷兰为中心的一场从立体主义走向完全抽象的国际艺术运动。它得名于艺术家们经常用 交流彼此思想的一本创 刊于1917年名为《风格》的导览杂志。&quot;},&quot;candAnswer&quot;:{&quot;textAnswer&quot;:&quot;19世纪荷兰几个志趣相投的画家组成派别，风格为绝对的抽象主义，代表人物为蒙德里安，代表作为《红黄蓝》。&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482748,&quot;partSeq&quot;:2,&quot;questionSeq&quot;:2,&quot;point&quot;:4.0,&quot;answerTime&quot;:94,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;},{&quot;title&quot;:&quot;&lt;pre&gt;大地艺术&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;出现于20世纪60年代未、70年代初，一些具有探索精神的雕塑家放弃传统的创作材料与艺术作品的永久性，走出画廊、美术馆，选择到自然中去创作自已的作品。&quot;},&quot;candAnswer&quot;:{&quot;textAnswer&quot;:&quot;诞生于二十世纪60年代末70年代初的一种艺术，是雕塑家放弃稳定的雕塑材料和永久的艺术作品而去自然界当中做出的艺术创作&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482749,&quot;partSeq&quot;:2,&quot;questionSeq&quot;:3,&quot;point&quot;:4.0,&quot;answerTime&quot;:120,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;},{&quot;title&quot;:&quot;&lt;pre&gt;高技派风格&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;是把当代科技特色当作设计元素并用夸张的形式来表现，把科技中的技术结构成分提炼出来，追求工业材料和加工技术的运用，用夸张的手法形成一种视觉冲击效果。&quot;},&quot;candAnswer&quot;:{&quot;textAnswer&quot;:&quot;现代&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482747,&quot;partSeq&quot;:2,&quot;questionSeq&quot;:4,&quot;point&quot;:4.0,&quot;answerTime&quot;:37,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;},{&quot;title&quot;:&quot;&lt;pre&gt;现代设计&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;是现代工业生产条件下的产物，是解决艺术、功能和机器生产之间的冲突的手段，它是在现代工业批量化生产的条件下，把产品的功能性、造型的审美性和使用的舒适性有机、和谐地统一起来的设计。&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482746,&quot;partSeq&quot;:2,&quot;questionSeq&quot;:5,&quot;point&quot;:4.0,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;}],&quot;count&quot;:5,&quot;score&quot;:0.0,&quot;point&quot;:20.0,&quot;partIndex&quot;:1},{&quot;partName&quot;:&quot;简答题&quot;,&quot;partSkills&quot;:[{&quot;skillName&quot;:&quot;常识&quot;,&quot;count&quot;:4,&quot;eCount&quot;:4,&quot;point&quot;:20.0,&quot;score&quot;:0.0,&quot;root&quot;:true,&quot;questionTypeDesc&quot;:&quot;问答题&quot;}],&quot;partQuestions&quot;:[{&quot;title&quot;:&quot;&lt;pre&gt;简述设计的两种表现形态。&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;在一些情况下，它只是生产过程的内部因素，没有从生产中脱离出来，（2分）产品的原型保留在生产者的头脑中，生产者也就是设计者。（1分）在另一些情况下，设计是独立的活动，生产者根据设计师预先设计的图纸进行加工。（2分）&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482752,&quot;partSeq&quot;:3,&quot;questionSeq&quot;:1,&quot;point&quot;:5.0,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;},{&quot;title&quot;:&quot;&lt;pre&gt;简述青蛙公司建设性的后现代设计观。&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;（1）青蛙设计公司的“形式追随激情”设计哲学，直接挑战其前辈所倡导的“形式服从功能”的现代设计原则。（2分）（2）青蛙的设计原则是跨越技术与美学的界限，以文化、激情和实用性来定义产品。（1分）（3）青蛙的设计也不再像以往那样常常以设计和创造一种新生活方式来强加于消费者，它更多关注于延续或提升消费者对某种生活方式原有的舒适、美好的感觉。（2分）&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482750,&quot;partSeq&quot;:3,&quot;questionSeq&quot;:2,&quot;point&quot;:5.0,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;},{&quot;title&quot;:&quot;&lt;pre&gt;简述乌尔姆设计学院的精神。&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;（1）在设计思想方面，确立以理性和社会性优先为原则，反对为美和造型而去设计物品。（2分）（2）在教学方面，乌尔姆确立的理性和社会性优先的原则是通过相关的课程得到实现的。（1分）（3）在视觉传达设计专业，教育的目的是解决大众传播领域中视觉方面的造型任务。（4）乌尔姆设计学院的设计教育是一种现代性、开放性的教育同，它为现代设计教育建立一个坐标。（2分）&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482751,&quot;partSeq&quot;:3,&quot;questionSeq&quot;:3,&quot;point&quot;:5.0,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;},{&quot;title&quot;:&quot;&lt;pre&gt;简述北欧现代设计的特征。&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;北欧国家包括芬兰、丹麦、瑞典、挪威、冰岛五国，人主地理相对独立，具有与欧洲其他国家不同的设计传统，形成了设计上以功能为第一要素的功能主义思想，注重现代与传统、机械化与手工艺、理性主义与人情味的巧妙结合，（2分）风格简朴、典雅、明快，合理运用自然材料并突出材料自身的特点，注重形式与功能的统一，（2分）既强调产品的高度理性主义的实用性，又在其设计中注入丰富的人文内涵和温情脉脉的情调。（1分）&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482753,&quot;partSeq&quot;:3,&quot;questionSeq&quot;:4,&quot;point&quot;:5.0,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;}],&quot;count&quot;:4,&quot;score&quot;:0.0,&quot;point&quot;:20.0,&quot;partIndex&quot;:2},{&quot;partName&quot;:&quot;案例题&quot;,&quot;partSkills&quot;:[{&quot;skillName&quot;:&quot;常识&quot;,&quot;count&quot;:2,&quot;eCount&quot;:2,&quot;point&quot;:16.0,&quot;score&quot;:0.0,&quot;root&quot;:true,&quot;questionTypeDesc&quot;:&quot;问答题&quot;}],&quot;partQuestions&quot;:[{&quot;title&quot;:&quot;&lt;pre&gt;试分析法国“蓬皮杜国家艺术与文化中心”的设计观念。&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;1977年由英国建筑 师理查德，罗杰斯与意大利建筑师伦佐、皮亚诺设计，（2分）与一般建筑不同的是，它的钢柱、钢梁、桁架、拉杆等结构构件都祼露在建筑物的表现，甚至货运电梯、电缆、上下水管道等也置于临街立面上，（2分）绿色的供水管，黄色的电气设备管，红色的交通设备管，蓝色的空调设备管，交错排列，（2分）一目了然，从而体现出现代建筑应该是利用现代技术手段造成的一种框架、一种装置或一个容器，让人们在其中灵活方便地进行各种活动。（2分）&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482755,&quot;partSeq&quot;:4,&quot;questionSeq&quot;:1,&quot;point&quot;:8.0,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;},{&quot;title&quot;:&quot;&lt;pre&gt;试分析“莫里斯田园风格”的美学思想。&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;莫里斯是生活在英国19世纪后半期杰出的艺术设计家、手工艺人、画家和空想社会主义者，在设计中主张从自然植物纹样中吸取素材与营养，主张设计风格的整体性、统一性。他亲自设计壁挂、地毯、壁纸等，（3分）常用的纹样是缠绕的植物枝蔓与花叶，（1分）自然气息浓厚，图案优雅、恬静，极富生机和装饰美感，（2分）他那布满花卉和果实，有时加上几只小鸟，并用弯曲的枝条和叶子中联起来的图案和设计品，成为许多博物馆的藏品。（2分）&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482754,&quot;partSeq&quot;:4,&quot;questionSeq&quot;:2,&quot;point&quot;:8.0,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;}],&quot;count&quot;:2,&quot;score&quot;:0.0,&quot;point&quot;:16.0,&quot;partIndex&quot;:3},{&quot;partName&quot;:&quot;论述题&quot;,&quot;partSkills&quot;:[{&quot;skillName&quot;:&quot;常识&quot;,&quot;count&quot;:2,&quot;eCount&quot;:2,&quot;point&quot;:24.0,&quot;score&quot;:0.0,&quot;root&quot;:true,&quot;questionTypeDesc&quot;:&quot;问答题&quot;}],&quot;partQuestions&quot;:[{&quot;title&quot;:&quot;&lt;pre&gt;试述包豪斯设计学院与乌尔姆设计学院的异同。&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;相同点：都是短暂的发展历程，学院都受到了各界名流的关注。作业用都不仅仅是德国现代设计的重要中心，同时对世界设计也起到推动作用。（3分）\n异同点：\n（1）包豪斯建筑学派的设计强调简约朴素风格，促进了国际建筑风格的形成。包豪斯设计学院课程将艺术设计理论与实践相结合，在车间进行土木、编织、金工、制陶和印刷方面的训练。（2分）这样训练的目的，是希望培养学生创造美观兼实用的作品的能力，以便能够从事大规模生产。（1分）\n（2）乌尔姆历史便展现了冷战时期更广泛的美学与政治、功能主义与自由主义之间的关系。此外，拟订的乌尔姆教师名单也迅速将名不见经传的乌尔姆推到国际民主政治和文化的前沿。乌尔姆学院的酝酿过程要比包豪斯长得多。（3分） 适当阐述（3分）&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482756,&quot;partSeq&quot;:5,&quot;questionSeq&quot;:1,&quot;point&quot;:12.0,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;},{&quot;title&quot;:&quot;&lt;pre&gt;试述当代商业设计恶俗美学的批判。&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;（1）制造虚假需求的批判，在商业设计中，无论在符号系统中还是象征逻辑中，产品都彻底地与某种实际的需求或功能失去了联系，产品的内涵变成了可以随心所欲替换的东西。（3分）\n （2）追求畸趣的批判，商业设计无时无刻不在为消费都设计着一面美的谎言的镜子，让消费者在各种美丽而虚幻的映像中，得到一中吸毒式的快感。（2分）\n （3）渲染性趣的批判，性趣是人类一种正常的而又需要保持私密性的本能需求，在商业设计中却被刻意地运用内科为企业吸引大众眼球、广告营销的策略。（2分）\n （4）过度设计的批判，在大众文化的土壤中，在追求利益最大化的目标的驱动下，商业设计把人们的衣食住行等日常生活形态设计成显露个体文化身份和社会地位的重要标志。（3分）适当阐述（2分）&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482757,&quot;partSeq&quot;:5,&quot;questionSeq&quot;:2,&quot;point&quot;:12.0,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;}],&quot;count&quot;:2,&quot;score&quot;:0.0,&quot;point&quot;:24.0,&quot;partIndex&quot;:4}]"></report-detail-summary>
+</div>
+                                                                                                <div class="report-answer" id="report-answer">
+    <div class="section-title">答题情况</div>
+            <div class="part-title">单选题（共20道题）</div>
+                                                                                
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="0"
+                                  :question-index="0"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;波普艺术最早诞生在【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;德国&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;英国&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;美国&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;意大利&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;B&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;B&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482737,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:1,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:5,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[0,1,2,3]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>波普艺术最早诞生在【   】</pre>    </div>
+
+        
+                    <ul class="q-options unselectable" v-pre>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">A、</span>
+                    <pre>德国</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-dot-circle-o"></i>
+                                        <span class="q-index">B、</span>
+                    <pre>英国</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">C、</span>
+                    <pre>美国</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">D、</span>
+                    <pre>意大利</pre>                </li>
+                    </ul>
+    
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            B                    </div>
+                            <div class="q-text" v-pre>
+                <p>正确答案：</p>
+                <pre>B</pre>
+            </div>
+            
+        
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="0"
+                                  :question-index="1"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;海报《红楔子攻打白色》的设计者是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;奥里斯&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;诺伊&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;艾尔·利兹斯基&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;略特&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;C&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;C&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482733,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:2,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:2,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[2,0,3,1]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>海报《红楔子攻打白色》的设计者是【   】</pre>    </div>
+
+        
+                    <ul class="q-options unselectable" v-pre>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">A、</span>
+                    <pre>奥里斯</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">B、</span>
+                    <pre>诺伊</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-dot-circle-o"></i>
+                                        <span class="q-index">C、</span>
+                    <pre>艾尔·利兹斯基</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">D、</span>
+                    <pre>略特</pre>                </li>
+                    </ul>
+    
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            C                    </div>
+                            <div class="q-text" v-pre>
+                <p>正确答案：</p>
+                <pre>C</pre>
+            </div>
+            
+        
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="0"
+                                  :question-index="2"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;获得“意大利学院艺术奖”巴黎建筑学院金奖的是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;逻顺德斯&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;庞蒂&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;希伯斯利&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;杜斯伯格&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;B&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;B&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482743,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:3,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:6,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[1,2,3,0]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>获得“意大利学院艺术奖”巴黎建筑学院金奖的是【   】</pre>    </div>
+
+        
+                    <ul class="q-options unselectable" v-pre>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">A、</span>
+                    <pre>逻顺德斯</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-dot-circle-o"></i>
+                                        <span class="q-index">B、</span>
+                    <pre>庞蒂</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">C、</span>
+                    <pre>希伯斯利</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">D、</span>
+                    <pre>杜斯伯格</pre>                </li>
+                    </ul>
+    
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            B                    </div>
+                            <div class="q-text" v-pre>
+                <p>正确答案：</p>
+                <pre>B</pre>
+            </div>
+            
+        
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="0"
+                                  :question-index="3"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;文艺复兴运动吹响了哪国现代科技革命号角？【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;英国&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;美国&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;意大利&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;德国&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;C&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482731,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:4,&quot;score&quot;:0.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:5,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[1,2,3,0]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>文艺复兴运动吹响了哪国现代科技革命号角？【   】</pre>    </div>
+
+        
+                    <ul class="q-options unselectable" v-pre>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-dot-circle-o"></i>
+                                        <span class="q-index">A、</span>
+                    <pre>英国</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">B、</span>
+                    <pre>美国</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">C、</span>
+                    <pre>意大利</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">D、</span>
+                    <pre>德国</pre>                </li>
+                    </ul>
+    
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            A                    </div>
+                            <div class="q-text" v-pre>
+                <p>正确答案：</p>
+                <pre>C</pre>
+            </div>
+            
+        
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="0"
+                                  :question-index="4"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;流线型设计产品外形主要形式是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;圆滑流畅&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;波浪线&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;直线&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;斜线&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482734,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:5,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:4,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[1,3,0,2]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>流线型设计产品外形主要形式是【   】</pre>    </div>
+
+        
+                    <ul class="q-options unselectable" v-pre>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-dot-circle-o"></i>
+                                        <span class="q-index">A、</span>
+                    <pre>圆滑流畅</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">B、</span>
+                    <pre>波浪线</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">C、</span>
+                    <pre>直线</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">D、</span>
+                    <pre>斜线</pre>                </li>
+                    </ul>
+    
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            A                    </div>
+                            <div class="q-text" v-pre>
+                <p>正确答案：</p>
+                <pre>A</pre>
+            </div>
+            
+        
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="0"
+                                  :question-index="5"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;中国现代设计教育的萌发点是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;工人运动&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;洋务运动&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;农民起义&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;戊戌变法&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;B&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;B&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482736,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:6,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:3,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[1,0,2,3]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>中国现代设计教育的萌发点是【   】</pre>    </div>
+
+        
+                    <ul class="q-options unselectable" v-pre>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">A、</span>
+                    <pre>工人运动</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-dot-circle-o"></i>
+                                        <span class="q-index">B、</span>
+                    <pre>洋务运动</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">C、</span>
+                    <pre>农民起义</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">D、</span>
+                    <pre>戊戌变法</pre>                </li>
+                    </ul>
+    
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            B                    </div>
+                            <div class="q-text" v-pre>
+                <p>正确答案：</p>
+                <pre>B</pre>
+            </div>
+            
+        
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="0"
+                                  :question-index="6"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;德国“电动汽车之父”是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;拉斯金&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;弗兰克·皮克&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;艾尔·利兹期基&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;斐迪南·保时捷&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;D&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;D&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482726,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:7,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:2,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[2,1,0,3]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>德国“电动汽车之父”是【   】</pre>    </div>
+
+        
+                    <ul class="q-options unselectable" v-pre>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">A、</span>
+                    <pre>拉斯金</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">B、</span>
+                    <pre>弗兰克·皮克</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">C、</span>
+                    <pre>艾尔·利兹期基</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-dot-circle-o"></i>
+                                        <span class="q-index">D、</span>
+                    <pre>斐迪南·保时捷</pre>                </li>
+                    </ul>
+    
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            D                    </div>
+                            <div class="q-text" v-pre>
+                <p>正确答案：</p>
+                <pre>D</pre>
+            </div>
+            
+        
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="0"
+                                  :question-index="7"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;最早提出后现代主义概念的是美国建筑家罗伯特·文丘里，并提出【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;“少则厌烦”的观念&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;“多则少”的观念&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;“多则厌烦”的观念&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;“少则多”的观念&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482728,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:8,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:11,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[0,3,2,1]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>最早提出后现代主义概念的是美国建筑家罗伯特·文丘里，并提出【   】</pre>    </div>
+
+        
+                    <ul class="q-options unselectable" v-pre>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-dot-circle-o"></i>
+                                        <span class="q-index">A、</span>
+                    <pre>“少则厌烦”的观念</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">B、</span>
+                    <pre>“多则少”的观念</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">C、</span>
+                    <pre>“多则厌烦”的观念</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">D、</span>
+                    <pre>“少则多”的观念</pre>                </li>
+                    </ul>
+    
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            A                    </div>
+                            <div class="q-text" v-pre>
+                <p>正确答案：</p>
+                <pre>A</pre>
+            </div>
+            
+        
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="0"
+                                  :question-index="8"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;20世纪80年代中期，我国学界掀起了一场全国性的工业设计即【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;“认识运动”&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;“工人运动”&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;“艺术运动”&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;“设计运动”&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482742,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:9,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:8,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[0,1,3,2]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>20世纪80年代中期，我国学界掀起了一场全国性的工业设计即【   】</pre>    </div>
+
+        
+                    <ul class="q-options unselectable" v-pre>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-dot-circle-o"></i>
+                                        <span class="q-index">A、</span>
+                    <pre>“认识运动”</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">B、</span>
+                    <pre>“工人运动”</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">C、</span>
+                    <pre>“艺术运动”</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">D、</span>
+                    <pre>“设计运动”</pre>                </li>
+                    </ul>
+    
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            A                    </div>
+                            <div class="q-text" v-pre>
+                <p>正确答案：</p>
+                <pre>A</pre>
+            </div>
+            
+        
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="0"
+                                  :question-index="9"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;1927年为巴塞罗那大展德国馆设计“巴塞罗那椅”的作者是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;米斯·凡·德·罗&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;里内拉&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;布尔达里&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;德里达&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482735,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:10,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:4,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[0,3,1,2]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>1927年为巴塞罗那大展德国馆设计“巴塞罗那椅”的作者是【   】</pre>    </div>
+
+        
+                    <ul class="q-options unselectable" v-pre>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-dot-circle-o"></i>
+                                        <span class="q-index">A、</span>
+                    <pre>米斯·凡·德·罗</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">B、</span>
+                    <pre>里内拉</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">C、</span>
+                    <pre>布尔达里</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">D、</span>
+                    <pre>德里达</pre>                </li>
+                    </ul>
+    
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            A                    </div>
+                            <div class="q-text" v-pre>
+                <p>正确答案：</p>
+                <pre>A</pre>
+            </div>
+            
+        
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="0"
+                                  :question-index="10"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;欧洲设计体系的主要特征是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;样式主义&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;功能主义&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;形式主义&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;精神主义&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;B&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;B&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482730,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:11,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:3,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[2,3,0,1]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>欧洲设计体系的主要特征是【   】</pre>    </div>
+
+        
+                    <ul class="q-options unselectable" v-pre>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">A、</span>
+                    <pre>样式主义</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-dot-circle-o"></i>
+                                        <span class="q-index">B、</span>
+                    <pre>功能主义</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">C、</span>
+                    <pre>形式主义</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">D、</span>
+                    <pre>精神主义</pre>                </li>
+                    </ul>
+    
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            B                    </div>
+                            <div class="q-text" v-pre>
+                <p>正确答案：</p>
+                <pre>B</pre>
+            </div>
+            
+        
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="0"
+                                  :question-index="11"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;1930年迈耶不得不辞职离开包豪斯是因为他的【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;艺术欣赏&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;政治立场&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;个人&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;设计能力&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;B&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;B&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482740,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:12,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:2,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[0,3,2,1]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>1930年迈耶不得不辞职离开包豪斯是因为他的【   】</pre>    </div>
+
+        
+                    <ul class="q-options unselectable" v-pre>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">A、</span>
+                    <pre>艺术欣赏</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-dot-circle-o"></i>
+                                        <span class="q-index">B、</span>
+                    <pre>政治立场</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">C、</span>
+                    <pre>个人</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">D、</span>
+                    <pre>设计能力</pre>                </li>
+                    </ul>
+    
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            B                    </div>
+                            <div class="q-text" v-pre>
+                <p>正确答案：</p>
+                <pre>B</pre>
+            </div>
+            
+        
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="0"
+                                  :question-index="12"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;1926年包豪斯的校名里增加了一个副标题即【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;设计学院&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;美术学院&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;设计院&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;艺术院校&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482727,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:13,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:3,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[0,3,2,1]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>1926年包豪斯的校名里增加了一个副标题即【   】</pre>    </div>
+
+        
+                    <ul class="q-options unselectable" v-pre>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-dot-circle-o"></i>
+                                        <span class="q-index">A、</span>
+                    <pre>设计学院</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">B、</span>
+                    <pre>美术学院</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">C、</span>
+                    <pre>设计院</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">D、</span>
+                    <pre>艺术院校</pre>                </li>
+                    </ul>
+    
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            A                    </div>
+                            <div class="q-text" v-pre>
+                <p>正确答案：</p>
+                <pre>A</pre>
+            </div>
+            
+        
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="0"
+                                  :question-index="13"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;荷兰“风格派”的核心人物是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;毕达哥拉斯&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;柏拉图&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;蒙德里安&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;亚里士多德&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;C&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;C&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482725,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:14,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:2,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[3,0,1,2]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>荷兰“风格派”的核心人物是【   】</pre>    </div>
+
+        
+                    <ul class="q-options unselectable" v-pre>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">A、</span>
+                    <pre>毕达哥拉斯</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">B、</span>
+                    <pre>柏拉图</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-dot-circle-o"></i>
+                                        <span class="q-index">C、</span>
+                    <pre>蒙德里安</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">D、</span>
+                    <pre>亚里士多德</pre>                </li>
+                    </ul>
+    
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            C                    </div>
+                            <div class="q-text" v-pre>
+                <p>正确答案：</p>
+                <pre>C</pre>
+            </div>
+            
+        
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="0"
+                                  :question-index="14"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;20世纪90年代人类开始进入【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;信息化社会时代&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;艺术设计时代&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;时尚时代&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;社会发展时代&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482741,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:15,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:2,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[1,0,3,2]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>20世纪90年代人类开始进入【   】</pre>    </div>
+
+        
+                    <ul class="q-options unselectable" v-pre>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-dot-circle-o"></i>
+                                        <span class="q-index">A、</span>
+                    <pre>信息化社会时代</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">B、</span>
+                    <pre>艺术设计时代</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">C、</span>
+                    <pre>时尚时代</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">D、</span>
+                    <pre>社会发展时代</pre>                </li>
+                    </ul>
+    
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            A                    </div>
+                            <div class="q-text" v-pre>
+                <p>正确答案：</p>
+                <pre>A</pre>
+            </div>
+            
+        
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="0"
+                                  :question-index="15"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;被报界惊呼为世界上最有意义、最美丽的博物馆是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;英国国家博物馆&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;向日葵博物馆&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;大地艺术博物馆&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;古根海姆博物馆&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;D&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;D&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482729,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:16,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:2,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[1,0,3,2]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>被报界惊呼为世界上最有意义、最美丽的博物馆是【   】</pre>    </div>
+
+        
+                    <ul class="q-options unselectable" v-pre>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">A、</span>
+                    <pre>英国国家博物馆</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">B、</span>
+                    <pre>向日葵博物馆</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">C、</span>
+                    <pre>大地艺术博物馆</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-dot-circle-o"></i>
+                                        <span class="q-index">D、</span>
+                    <pre>古根海姆博物馆</pre>                </li>
+                    </ul>
+    
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            D                    </div>
+                            <div class="q-text" v-pre>
+                <p>正确答案：</p>
+                <pre>D</pre>
+            </div>
+            
+        
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="0"
+                                  :question-index="16"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;对现代设计影响最大的现代艺术家是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;弗兰克·盖里&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;普里兹克&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;金兹堡&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;毕加索&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;D&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;D&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482738,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:17,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:3,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[2,3,1,0]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>对现代设计影响最大的现代艺术家是【   】</pre>    </div>
+
+        
+                    <ul class="q-options unselectable" v-pre>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">A、</span>
+                    <pre>弗兰克·盖里</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">B、</span>
+                    <pre>普里兹克</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">C、</span>
+                    <pre>金兹堡</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-dot-circle-o"></i>
+                                        <span class="q-index">D、</span>
+                    <pre>毕加索</pre>                </li>
+                    </ul>
+    
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            D                    </div>
+                            <div class="q-text" v-pre>
+                <p>正确答案：</p>
+                <pre>D</pre>
+            </div>
+            
+        
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="0"
+                                  :question-index="17"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;最早实行工业设计师登记制度的国家是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;意大利&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;德国&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;英国&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;美国&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;C&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;C&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482739,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:18,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:3,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[3,0,1,2]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>最早实行工业设计师登记制度的国家是【   】</pre>    </div>
+
+        
+                    <ul class="q-options unselectable" v-pre>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">A、</span>
+                    <pre>意大利</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">B、</span>
+                    <pre>德国</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-dot-circle-o"></i>
+                                        <span class="q-index">C、</span>
+                    <pre>英国</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">D、</span>
+                    <pre>美国</pre>                </li>
+                    </ul>
+    
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            C                    </div>
+                            <div class="q-text" v-pre>
+                <p>正确答案：</p>
+                <pre>C</pre>
+            </div>
+            
+        
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="0"
+                                  :question-index="18"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;反“有计划的商品废止制”代表人物是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;埃德加·考夫曼&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;希达达尔&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;德尔谩夫&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;马克斯·比尔&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;A&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482744,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:19,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:6,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[1,2,0,3]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>反“有计划的商品废止制”代表人物是【   】</pre>    </div>
+
+        
+                    <ul class="q-options unselectable" v-pre>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-dot-circle-o"></i>
+                                        <span class="q-index">A、</span>
+                    <pre>埃德加·考夫曼</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">B、</span>
+                    <pre>希达达尔</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">C、</span>
+                    <pre>德尔谩夫</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">D、</span>
+                    <pre>马克斯·比尔</pre>                </li>
+                    </ul>
+    
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            A                    </div>
+                            <div class="q-text" v-pre>
+                <p>正确答案：</p>
+                <pre>A</pre>
+            </div>
+            
+        
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="0"
+                                  :question-index="19"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;1750年 《美学》一书的作者是【   】&lt;/pre&gt;&quot;,&quot;questionType&quot;:1,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;options&quot;:[&quot;&lt;pre&gt;里特维德&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;马克思&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;鲍姆伽通&lt;/pre&gt;&quot;,&quot;&lt;pre&gt;阿尔文·托夫勒&lt;/pre&gt;&quot;],&quot;refAnswer&quot;:{&quot;optAnswer&quot;:&quot;C&quot;},&quot;candAnswer&quot;:{&quot;optAnswer&quot;:&quot;C&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482732,&quot;partSeq&quot;:1,&quot;questionSeq&quot;:20,&quot;score&quot;:1.0,&quot;point&quot;:1.0,&quot;answerTime&quot;:3,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;testContent&quot;:&quot;{\&quot;indeces\&quot;:[3,1,0,2]}&quot;,&quot;skillName&quot;:&quot;常识&quot;,&quot;single&quot;:true,&quot;choice&quot;:true,&quot;isSub&quot;:false}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>1750年 《美学》一书的作者是【   】</pre>    </div>
+
+        
+                    <ul class="q-options unselectable" v-pre>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">A、</span>
+                    <pre>里特维德</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">B、</span>
+                    <pre>马克思</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-dot-circle-o"></i>
+                                        <span class="q-index">C、</span>
+                    <pre>鲍姆伽通</pre>                </li>
+                                            <li class="q-option">
+                                                                <i class="fa i-radio fa-circle-thin"></i>
+                                        <span class="q-index">D、</span>
+                    <pre>阿尔文·托夫勒</pre>                </li>
+                    </ul>
+    
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            C                    </div>
+                            <div class="q-text" v-pre>
+                <p>正确答案：</p>
+                <pre>C</pre>
+            </div>
+            
+        
+        
+        
+                
+        
+
+        </div>
+                    <div class="part-title">名词解释（共5道题）</div>
+                                                                                
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="1"
+                                  :question-index="0"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;整体性设计&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;指设计并不仅只是对某一件产品进行设计，而是包括生产企业的品牌形象的树立和推广设计、系列产品设计、包装设计、营销策划设计以及相关环境设计等内容。&quot;},&quot;candAnswer&quot;:{&quot;textAnswer&quot;:&quot;指的是不是单一的产品设计，还有生产厂家的设计，营销手法的设计，以及使用环境的一系列设计&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482745,&quot;partSeq&quot;:2,&quot;questionSeq&quot;:1,&quot;point&quot;:4.0,&quot;answerTime&quot;:80,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>整体性设计</pre>    </div>
+
+        
+            
+        
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                                            <pre>指的是不是单一的产品设计，还有生产厂家的设计，营销手法的设计，以及使用环境的一系列设计</pre>
+                    </div>
+                                    <div class="q-text unselectable" v-pre>
+                <p>参考答案：</p>
+                                                        <pre>指设计并不仅只是对某一件产品进行设计，而是包括生产企业的品牌形象的树立和推广设计、系列产品设计、包装设计、营销策划设计以及相关环境设计等内容。</pre>
+                            </div>
+            
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="1"
+                                  :question-index="1"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;风格派&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;是一群拥有相似美学观念的艺术家们在1917年到1931年间以荷兰为中心的一场从立体主义走向完全抽象的国际艺术运动。它得名于艺术家们经常用 交流彼此思想的一本创 刊于1917年名为《风格》的导览杂志。&quot;},&quot;candAnswer&quot;:{&quot;textAnswer&quot;:&quot;19世纪荷兰几个志趣相投的画家组成派别，风格为绝对的抽象主义，代表人物为蒙德里安，代表作为《红黄蓝》。&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482748,&quot;partSeq&quot;:2,&quot;questionSeq&quot;:2,&quot;point&quot;:4.0,&quot;answerTime&quot;:94,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>风格派</pre>    </div>
+
+        
+            
+        
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                                            <pre>19世纪荷兰几个志趣相投的画家组成派别，风格为绝对的抽象主义，代表人物为蒙德里安，代表作为《红黄蓝》。</pre>
+                    </div>
+                                    <div class="q-text unselectable" v-pre>
+                <p>参考答案：</p>
+                                                        <pre>是一群拥有相似美学观念的艺术家们在1917年到1931年间以荷兰为中心的一场从立体主义走向完全抽象的国际艺术运动。它得名于艺术家们经常用 交流彼此思想的一本创 刊于1917年名为《风格》的导览杂志。</pre>
+                            </div>
+            
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="1"
+                                  :question-index="2"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;大地艺术&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;出现于20世纪60年代未、70年代初，一些具有探索精神的雕塑家放弃传统的创作材料与艺术作品的永久性，走出画廊、美术馆，选择到自然中去创作自已的作品。&quot;},&quot;candAnswer&quot;:{&quot;textAnswer&quot;:&quot;诞生于二十世纪60年代末70年代初的一种艺术，是雕塑家放弃稳定的雕塑材料和永久的艺术作品而去自然界当中做出的艺术创作&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482749,&quot;partSeq&quot;:2,&quot;questionSeq&quot;:3,&quot;point&quot;:4.0,&quot;answerTime&quot;:120,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>大地艺术</pre>    </div>
+
+        
+            
+        
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                                            <pre>诞生于二十世纪60年代末70年代初的一种艺术，是雕塑家放弃稳定的雕塑材料和永久的艺术作品而去自然界当中做出的艺术创作</pre>
+                    </div>
+                                    <div class="q-text unselectable" v-pre>
+                <p>参考答案：</p>
+                                                        <pre>出现于20世纪60年代未、70年代初，一些具有探索精神的雕塑家放弃传统的创作材料与艺术作品的永久性，走出画廊、美术馆，选择到自然中去创作自已的作品。</pre>
+                            </div>
+            
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="1"
+                                  :question-index="3"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;高技派风格&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;是把当代科技特色当作设计元素并用夸张的形式来表现，把科技中的技术结构成分提炼出来，追求工业材料和加工技术的运用，用夸张的手法形成一种视觉冲击效果。&quot;},&quot;candAnswer&quot;:{&quot;textAnswer&quot;:&quot;现代&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482747,&quot;partSeq&quot;:2,&quot;questionSeq&quot;:4,&quot;point&quot;:4.0,&quot;answerTime&quot;:37,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>高技派风格</pre>    </div>
+
+        
+            
+        
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                                            <pre>现代</pre>
+                    </div>
+                                    <div class="q-text unselectable" v-pre>
+                <p>参考答案：</p>
+                                                        <pre>是把当代科技特色当作设计元素并用夸张的形式来表现，把科技中的技术结构成分提炼出来，追求工业材料和加工技术的运用，用夸张的手法形成一种视觉冲击效果。</pre>
+                            </div>
+            
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="1"
+                                  :question-index="4"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;现代设计&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;是现代工业生产条件下的产物，是解决艺术、功能和机器生产之间的冲突的手段，它是在现代工业批量化生产的条件下，把产品的功能性、造型的审美性和使用的舒适性有机、和谐地统一起来的设计。&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482746,&quot;partSeq&quot;:2,&quot;questionSeq&quot;:5,&quot;point&quot;:4.0,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>现代设计</pre>    </div>
+
+        
+            
+        
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            <pre class="blank-empty">无</pre>
+                    </div>
+                                    <div class="q-text unselectable" v-pre>
+                <p>参考答案：</p>
+                                                        <pre>是现代工业生产条件下的产物，是解决艺术、功能和机器生产之间的冲突的手段，它是在现代工业批量化生产的条件下，把产品的功能性、造型的审美性和使用的舒适性有机、和谐地统一起来的设计。</pre>
+                            </div>
+            
+        
+        
+                
+        
+
+        </div>
+                    <div class="part-title">简答题（共4道题）</div>
+                                                                                
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="2"
+                                  :question-index="0"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;简述设计的两种表现形态。&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;在一些情况下，它只是生产过程的内部因素，没有从生产中脱离出来，（2分）产品的原型保留在生产者的头脑中，生产者也就是设计者。（1分）在另一些情况下，设计是独立的活动，生产者根据设计师预先设计的图纸进行加工。（2分）&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482752,&quot;partSeq&quot;:3,&quot;questionSeq&quot;:1,&quot;point&quot;:5.0,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>简述设计的两种表现形态。</pre>    </div>
+
+        
+            
+        
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            <pre class="blank-empty">无</pre>
+                    </div>
+                                    <div class="q-text unselectable" v-pre>
+                <p>参考答案：</p>
+                                                        <pre>在一些情况下，它只是生产过程的内部因素，没有从生产中脱离出来，（2分）产品的原型保留在生产者的头脑中，生产者也就是设计者。（1分）在另一些情况下，设计是独立的活动，生产者根据设计师预先设计的图纸进行加工。（2分）</pre>
+                            </div>
+            
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="2"
+                                  :question-index="1"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;简述青蛙公司建设性的后现代设计观。&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;（1）青蛙设计公司的“形式追随激情”设计哲学，直接挑战其前辈所倡导的“形式服从功能”的现代设计原则。（2分）（2）青蛙的设计原则是跨越技术与美学的界限，以文化、激情和实用性来定义产品。（1分）（3）青蛙的设计也不再像以往那样常常以设计和创造一种新生活方式来强加于消费者，它更多关注于延续或提升消费者对某种生活方式原有的舒适、美好的感觉。（2分）&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482750,&quot;partSeq&quot;:3,&quot;questionSeq&quot;:2,&quot;point&quot;:5.0,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>简述青蛙公司建设性的后现代设计观。</pre>    </div>
+
+        
+            
+        
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            <pre class="blank-empty">无</pre>
+                    </div>
+                                    <div class="q-text unselectable" v-pre>
+                <p>参考答案：</p>
+                                                        <pre>（1）青蛙设计公司的“形式追随激情”设计哲学，直接挑战其前辈所倡导的“形式服从功能”的现代设计原则。（2分）（2）青蛙的设计原则是跨越技术与美学的界限，以文化、激情和实用性来定义产品。（1分）（3）青蛙的设计也不再像以往那样常常以设计和创造一种新生活方式来强加于消费者，它更多关注于延续或提升消费者对某种生活方式原有的舒适、美好的感觉。（2分）</pre>
+                            </div>
+            
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="2"
+                                  :question-index="2"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;简述乌尔姆设计学院的精神。&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;（1）在设计思想方面，确立以理性和社会性优先为原则，反对为美和造型而去设计物品。（2分）（2）在教学方面，乌尔姆确立的理性和社会性优先的原则是通过相关的课程得到实现的。（1分）（3）在视觉传达设计专业，教育的目的是解决大众传播领域中视觉方面的造型任务。（4）乌尔姆设计学院的设计教育是一种现代性、开放性的教育同，它为现代设计教育建立一个坐标。（2分）&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482751,&quot;partSeq&quot;:3,&quot;questionSeq&quot;:3,&quot;point&quot;:5.0,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>简述乌尔姆设计学院的精神。</pre>    </div>
+
+        
+            
+        
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            <pre class="blank-empty">无</pre>
+                    </div>
+                                    <div class="q-text unselectable" v-pre>
+                <p>参考答案：</p>
+                                                        <pre>（1）在设计思想方面，确立以理性和社会性优先为原则，反对为美和造型而去设计物品。（2分）（2）在教学方面，乌尔姆确立的理性和社会性优先的原则是通过相关的课程得到实现的。（1分）（3）在视觉传达设计专业，教育的目的是解决大众传播领域中视觉方面的造型任务。（4）乌尔姆设计学院的设计教育是一种现代性、开放性的教育同，它为现代设计教育建立一个坐标。（2分）</pre>
+                            </div>
+            
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="2"
+                                  :question-index="3"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;简述北欧现代设计的特征。&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;北欧国家包括芬兰、丹麦、瑞典、挪威、冰岛五国，人主地理相对独立，具有与欧洲其他国家不同的设计传统，形成了设计上以功能为第一要素的功能主义思想，注重现代与传统、机械化与手工艺、理性主义与人情味的巧妙结合，（2分）风格简朴、典雅、明快，合理运用自然材料并突出材料自身的特点，注重形式与功能的统一，（2分）既强调产品的高度理性主义的实用性，又在其设计中注入丰富的人文内涵和温情脉脉的情调。（1分）&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482753,&quot;partSeq&quot;:3,&quot;questionSeq&quot;:4,&quot;point&quot;:5.0,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>简述北欧现代设计的特征。</pre>    </div>
+
+        
+            
+        
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            <pre class="blank-empty">无</pre>
+                    </div>
+                                    <div class="q-text unselectable" v-pre>
+                <p>参考答案：</p>
+                                                        <pre>北欧国家包括芬兰、丹麦、瑞典、挪威、冰岛五国，人主地理相对独立，具有与欧洲其他国家不同的设计传统，形成了设计上以功能为第一要素的功能主义思想，注重现代与传统、机械化与手工艺、理性主义与人情味的巧妙结合，（2分）风格简朴、典雅、明快，合理运用自然材料并突出材料自身的特点，注重形式与功能的统一，（2分）既强调产品的高度理性主义的实用性，又在其设计中注入丰富的人文内涵和温情脉脉的情调。（1分）</pre>
+                            </div>
+            
+        
+        
+                
+        
+
+        </div>
+                    <div class="part-title">案例题（共2道题）</div>
+                                                                                
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="3"
+                                  :question-index="0"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;试分析法国“蓬皮杜国家艺术与文化中心”的设计观念。&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;1977年由英国建筑 师理查德，罗杰斯与意大利建筑师伦佐、皮亚诺设计，（2分）与一般建筑不同的是，它的钢柱、钢梁、桁架、拉杆等结构构件都祼露在建筑物的表现，甚至货运电梯、电缆、上下水管道等也置于临街立面上，（2分）绿色的供水管，黄色的电气设备管，红色的交通设备管，蓝色的空调设备管，交错排列，（2分）一目了然，从而体现出现代建筑应该是利用现代技术手段造成的一种框架、一种装置或一个容器，让人们在其中灵活方便地进行各种活动。（2分）&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482755,&quot;partSeq&quot;:4,&quot;questionSeq&quot;:1,&quot;point&quot;:8.0,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>试分析法国“蓬皮杜国家艺术与文化中心”的设计观念。</pre>    </div>
+
+        
+            
+        
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            <pre class="blank-empty">无</pre>
+                    </div>
+                                    <div class="q-text unselectable" v-pre>
+                <p>参考答案：</p>
+                                                        <pre>1977年由英国建筑 师理查德，罗杰斯与意大利建筑师伦佐、皮亚诺设计，（2分）与一般建筑不同的是，它的钢柱、钢梁、桁架、拉杆等结构构件都祼露在建筑物的表现，甚至货运电梯、电缆、上下水管道等也置于临街立面上，（2分）绿色的供水管，黄色的电气设备管，红色的交通设备管，蓝色的空调设备管，交错排列，（2分）一目了然，从而体现出现代建筑应该是利用现代技术手段造成的一种框架、一种装置或一个容器，让人们在其中灵活方便地进行各种活动。（2分）</pre>
+                            </div>
+            
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="3"
+                                  :question-index="1"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;试分析“莫里斯田园风格”的美学思想。&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;莫里斯是生活在英国19世纪后半期杰出的艺术设计家、手工艺人、画家和空想社会主义者，在设计中主张从自然植物纹样中吸取素材与营养，主张设计风格的整体性、统一性。他亲自设计壁挂、地毯、壁纸等，（3分）常用的纹样是缠绕的植物枝蔓与花叶，（1分）自然气息浓厚，图案优雅、恬静，极富生机和装饰美感，（2分）他那布满花卉和果实，有时加上几只小鸟，并用弯曲的枝条和叶子中联起来的图案和设计品，成为许多博物馆的藏品。（2分）&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482754,&quot;partSeq&quot;:4,&quot;questionSeq&quot;:2,&quot;point&quot;:8.0,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>试分析“莫里斯田园风格”的美学思想。</pre>    </div>
+
+        
+            
+        
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            <pre class="blank-empty">无</pre>
+                    </div>
+                                    <div class="q-text unselectable" v-pre>
+                <p>参考答案：</p>
+                                                        <pre>莫里斯是生活在英国19世纪后半期杰出的艺术设计家、手工艺人、画家和空想社会主义者，在设计中主张从自然植物纹样中吸取素材与营养，主张设计风格的整体性、统一性。他亲自设计壁挂、地毯、壁纸等，（3分）常用的纹样是缠绕的植物枝蔓与花叶，（1分）自然气息浓厚，图案优雅、恬静，极富生机和装饰美感，（2分）他那布满花卉和果实，有时加上几只小鸟，并用弯曲的枝条和叶子中联起来的图案和设计品，成为许多博物馆的藏品。（2分）</pre>
+                            </div>
+            
+        
+        
+                
+        
+
+        </div>
+                    <div class="part-title">论述题（共2道题）</div>
+                                                                                
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="4"
+                                  :question-index="0"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;试述包豪斯设计学院与乌尔姆设计学院的异同。&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;相同点：都是短暂的发展历程，学院都受到了各界名流的关注。作业用都不仅仅是德国现代设计的重要中心，同时对世界设计也起到推动作用。（3分）\n异同点：\n（1）包豪斯建筑学派的设计强调简约朴素风格，促进了国际建筑风格的形成。包豪斯设计学院课程将艺术设计理论与实践相结合，在车间进行土木、编织、金工、制陶和印刷方面的训练。（2分）这样训练的目的，是希望培养学生创造美观兼实用的作品的能力，以便能够从事大规模生产。（1分）\n（2）乌尔姆历史便展现了冷战时期更广泛的美学与政治、功能主义与自由主义之间的关系。此外，拟订的乌尔姆教师名单也迅速将名不见经传的乌尔姆推到国际民主政治和文化的前沿。乌尔姆学院的酝酿过程要比包豪斯长得多。（3分） 适当阐述（3分）&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482756,&quot;partSeq&quot;:5,&quot;questionSeq&quot;:1,&quot;point&quot;:12.0,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>试述包豪斯设计学院与乌尔姆设计学院的异同。</pre>    </div>
+
+        
+            
+        
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            <pre class="blank-empty">无</pre>
+                    </div>
+                                    <div class="q-text unselectable" v-pre>
+                <p>参考答案：</p>
+                                                        <pre>相同点：都是短暂的发展历程，学院都受到了各界名流的关注。作业用都不仅仅是德国现代设计的重要中心，同时对世界设计也起到推动作用。（3分）
+异同点：
+（1）包豪斯建筑学派的设计强调简约朴素风格，促进了国际建筑风格的形成。包豪斯设计学院课程将艺术设计理论与实践相结合，在车间进行土木、编织、金工、制陶和印刷方面的训练。（2分）这样训练的目的，是希望培养学生创造美观兼实用的作品的能力，以便能够从事大规模生产。（1分）
+（2）乌尔姆历史便展现了冷战时期更广泛的美学与政治、功能主义与自由主义之间的关系。此外，拟订的乌尔姆教师名单也迅速将名不见经传的乌尔姆推到国际民主政治和文化的前沿。乌尔姆学院的酝酿过程要比包豪斯长得多。（3分） 适当阐述（3分）</pre>
+                            </div>
+            
+        
+        
+                
+        
+
+        </div>
+                                                        
+
+<div class="question ">
+
+    
+            <report-detail-question-panel :part-index="4"
+                                  :question-index="1"
+                                  :model="{&quot;title&quot;:&quot;&lt;pre&gt;试述当代商业设计恶俗美学的批判。&lt;/pre&gt;&quot;,&quot;questionType&quot;:5,&quot;html&quot;:true,&quot;difficulty&quot;:0,&quot;refAnswer&quot;:{&quot;textAnswer&quot;:&quot;（1）制造虚假需求的批判，在商业设计中，无论在符号系统中还是象征逻辑中，产品都彻底地与某种实际的需求或功能失去了联系，产品的内涵变成了可以随心所欲替换的东西。（3分）\n （2）追求畸趣的批判，商业设计无时无刻不在为消费都设计着一面美的谎言的镜子，让消费者在各种美丽而虚幻的映像中，得到一中吸毒式的快感。（2分）\n （3）渲染性趣的批判，性趣是人类一种正常的而又需要保持私密性的本能需求，在商业设计中却被刻意地运用内科为企业吸引大众眼球、广告营销的策略。（2分）\n （4）过度设计的批判，在大众文化的土壤中，在追求利益最大化的目标的驱动下，商业设计把人们的衣食住行等日常生活形态设计成显露个体文化身份和社会地位的重要标志。（3分）适当阐述（2分）&quot;},&quot;editable&quot;:true,&quot;questionId&quot;:14482757,&quot;partSeq&quot;:5,&quot;questionSeq&quot;:2,&quot;point&quot;:12.0,&quot;skillNames&quot;:[&quot;常识&quot;],&quot;skillName&quot;:&quot;常识&quot;,&quot;isText&quot;:true,&quot;isSub&quot;:false,&quot;score&quot;:&quot;&quot;}"
+                                  :self-report="false"
+             print     ></report-detail-question-panel>
+
+        <div class="q-subject unselectable" v-pre>
+        <pre>试述当代商业设计恶俗美学的批判。</pre>    </div>
+
+        
+            
+        
+                                <div class="q-text cand" v-pre>
+            <p>考生答案：</p>
+                            <pre class="blank-empty">无</pre>
+                    </div>
+                                    <div class="q-text unselectable" v-pre>
+                <p>参考答案：</p>
+                                                        <pre>（1）制造虚假需求的批判，在商业设计中，无论在符号系统中还是象征逻辑中，产品都彻底地与某种实际的需求或功能失去了联系，产品的内涵变成了可以随心所欲替换的东西。（3分）
+ （2）追求畸趣的批判，商业设计无时无刻不在为消费都设计着一面美的谎言的镜子，让消费者在各种美丽而虚幻的映像中，得到一中吸毒式的快感。（2分）
+ （3）渲染性趣的批判，性趣是人类一种正常的而又需要保持私密性的本能需求，在商业设计中却被刻意地运用内科为企业吸引大众眼球、广告营销的策略。（2分）
+ （4）过度设计的批判，在大众文化的土壤中，在追求利益最大化的目标的驱动下，商业设计把人们的衣食住行等日常生活形态设计成显露个体文化身份和社会地位的重要标志。（3分）适当阐述（2分）</pre>
+                            </div>
+            
+        
+        
+                
+        
+
+        </div>
+            </div>
+                                                                                                                        <div class="report-logs" id="report-logs" v-pre>
+    <div class="section-title">测试日志</div>
+    <ul class="log-list">
+        <li class="mb5">浏览器 &emsp; safari</li>
+        <li class="mb5">IP 地址 &emsp; 183.221.181.236</li>
+        <li class="mb5">操作系统 &emsp; MacIntel</li>
+                                <li class="mb5 ">
+                <span class="log-time">2018-10-19 22:26</span>
+                <span class="ml30">开始测试</span>
+                            </li>
+                                <li class="mb5 ">
+                <span class="log-time">2018-10-19 22:26</span>
+                <span class="ml30">开始部分--&gt;单选题</span>
+                            </li>
+                                <li class="mb5 ">
+                <span class="log-time">2018-10-19 22:27</span>
+                <span class="ml30">开始部分--&gt;名词解释</span>
+                            </li>
+                                <li class="mb5 ">
+                <span class="log-time">2018-10-19 22:33</span>
+                <span class="ml30">开始部分--&gt;论述题</span>
+                            </li>
+                                <li class="mb5 ">
+                <span class="log-time">2018-10-20 00:26</span>
+                <span class="ml30">结束测试</span>
+                            </li>
+            </ul>
+</div>
+                                                                                                                                                                                    </div>
+                    </div>
+                </div>
+                                                    </div>
+    </div>
+            <modal :visible.sync="showCodeRunnerModal"
+               width="1100"
+               no-ok
+               cancel-text="关闭"
+               backdrop="static"
+               no-footer
+               class="code-runner-modal"
+               keep-alive
+        >
+            <code-runner>
+                <template slot="global-actions">
+                    <a class="action" data-dismiss="modal">
+                        <i class="fa fa-close text-bittersweet"></i>
+                    </a>
+                </template>
+            </code-runner>
+        </modal>
+            <modal :visible.sync="normalPicsModalVisible"
+           width="900"
+           no-ok
+           no-footer
+           title="考试截图"
+    >
+        <div class="row">
+            <div class="col-sm-3 report-pic" v-for="normal in reportPics.normals | limitBy normalLimit"><img class="thumbnail img-rounded" :src="normal.url" /></div>
+        </div>
+        <div class="pb15 tc" v-if="normalLimit < reportPics.normals.length">
+            <button class="btn btn-info w100" @click="loadMoreNormalPic">加载更多</button>
+        </div>
+    </modal>
+    <modal :visible.sync="abnormalPicsModalVisible"
+           width="900"
+           no-ok
+           no-footer
+           title="异常图片"
+           class="report-pics-modal"
+    >
+        <div class="row">
+            <div class="col-sm-3 report-pic" v-for="normal in reportPics.abnormals | limitBy abnormalLimit"><img class="thumbnail img-rounded" :src="normal.url" /></div>
+        </div>
+        <div class="pb15 tc" v-if="abnormalLimit < reportPics.abnormals.length">
+            <button class="btn btn-info w100" @click="loadMoreAbnormalPic">加载更多</button>
+        </div>
+    </modal>
+    <script src="/dist/lib.6aff8.js"></script>
+    <script src="/dist/vendor.d2d68.js"></script>
+    <script src="/dist/report-detail.f47f4.js"></script>
+</body>
+</html>
