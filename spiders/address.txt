@@ -1,0 +1,14 @@
+https://www.baidu.com/
+https://www.taobao.com/
+https://www.jd.com/
+https://www.360.com/
+https://www.suning.com/
+https://www.cnblogs.com/wq242424/p/6524697.html
+https://www.cnblogs.com/zb-ml/p/8926463.html
+https://www.baidu.com/s?wd=baidu&rsv_spt=1&rsv_iqid=0xd1c962b700003f00&issp=1&f=3&rsv_bp=1&rsv_idx=2&ie=utf-8&rqlang=cn&tn=baiduhome_pg&rsv_enter=1&oq=python%2520str%2520%25E5%258C%2585%25E5%2590%25AB&rsv_t=233dxc8WcyTtW7Z5ytlXYbTiGEuaBZLitFbX%2BsECUIbeZ8EX9rEcg3K7QcuUOigCRfZm&inputT=1358&rsv_pq=ea9900990003a8a3&rsv_sug3=136&rsv_sug2=0&prefixsug=baidu&rsp=0&rsv_sug4=2494
+https://www.360.cn/
+https://youku.com/
+https://www.baidu.com/s?wd=361&rsv_spt=1&rsv_iqid=0xf50f796b00012244&issp=1&f=8&rsv_bp=1&rsv_idx=2&ie=utf-8&rqlang=cn&tn=baiduhome_pg&rsv_enter=1&oq=%2526lt%253B60&inputT=337&rsv_t=21eaG35t2yIupBz0k4h5wZA6stXPYltV6zaKMcDe0DSLs9j%2FENcacLzrlq1aXbcLJ0UQ&rsv_sug3=8&rsv_pq=dff50f6b0002aa7e&rsv_sug2=0&rsv_sug4=14335&bs=360&rsv_jmp=fail
+https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=2&tn=baiduhome_pg&wd=python&rsv_spt=1&oq=%2526lt%253B61&rsv_pq=e3e0c9bf0001467c&rsv_t=1f12rnXYYGB7BYRIIjyUhXtc3Y9xSVdHLbmaR6k%2FjfjlAxPpRiSUj2Y3EFWSIUS5DoO8&rqlang=cn&rsv_enter=1&rsv_sug3=7&rsv_sug2=0&inputT=2227&rsv_sug4=3365
+https://baike.baidu.com/item/Python/407313?fr=aladdin
+https://www.baidu.com/s?rsv_idx=2&tn=baiduhome_pg&wd=%E5%A8%9C%E7%BE%8E%E8%BA%AB%E6%9D%90%E5%A6%B9&usm=6&ie=utf-8&rsv_cq=%E6%B5%B7%E8%B4%BC&rsv_dl=0_right_recommends_merge_21102&cq=%E6%B5%B7%E8%B4%BC&srcid=28310&rt=%E7%9B%B8%E5%85%B3%E4%BA%BA%E7%89%A9&recid=21102&euri=3bd9ff850a754ea9bfce10469e4ede8e

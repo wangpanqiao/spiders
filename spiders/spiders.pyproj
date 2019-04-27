@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>50674058-bda7-4c71-a86c-9eec09737a86</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>7160_spider_multi_thread.py</StartupFile>
+    <StartupFile>wechat_talker.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -29,18 +29,28 @@
     </Compile>
     <Compile Include="extract_answer_spider.py" />
     <Compile Include="meizhuo_spider.py" />
+    <Compile Include="baidu_tupian_spider.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="mzywfy_spider.py" />
+    <Compile Include="net_cover_tool.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="niutrans_spider.py" />
     <Compile Include="search_engine_spider.py" />
     <Compile Include="taobao_spider.py" />
     <Compile Include="toutiao_spider.py" />
     <Compile Include="meizitu_spider.py" />
+    <Compile Include="wechat_talker.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="files\" />
     <Folder Include="files\182次设计美学模拟练习报告_files\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="address.txt" />
     <Content Include="files\182次设计美学模拟练习报告.html" />
     <Content Include="files\182次设计美学模拟练习报告_files\.DS_Store" />
     <Content Include="files\182次设计美学模拟练习报告_files\1.fa8eb.js" />
