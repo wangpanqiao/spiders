@@ -34,10 +34,9 @@ def fun_timer():
     now = datetime.datetime.now()
     if now.hour == hour and now.minute == minute:
         send_chat_room_msg(chat_room_name, context)
-        time.sleep(60)
 
     global timer
-    timer = threading.Timer(10, fun_timer)
+    timer = threading.Timer(60, fun_timer)
     timer.start()
 
 

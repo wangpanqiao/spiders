@@ -44,6 +44,9 @@
     <Compile Include="wechat_talker.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="yahoo_weather_spider.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="files\" />
