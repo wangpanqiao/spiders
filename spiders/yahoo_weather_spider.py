@@ -1,64 +1,104 @@
-#!/usr/bin/env python3
-# coding: utf-8
-import os
-from datetime import datetime
-from urllib import request 
-from xml.parsers.expat import ParserCreate 
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+ 
+'''
+@Author  :   Anuo.
+ 
+@License :   (C) Copyright 2019, Anuo's Studio
+ 
+@Contact :   188512936@qq.com
+ 
+@Software:   VS2017
+ 
+@File    :   yahoo_weather_spider.py
+ 
+@Time    :   Apr 28,2019
+ 
+@Desc    :   雅虎天气API
 
-file_name = "weather.txt"
-for root, dirs, files in os.walk("."):
-    if file_name in files:
-        os.remove(os.path.join(root, file_name))
+'''
 
-def yahoo_weather(data):
-    flag = False
-    weather = {"city": "", "pubdate": "", "forecast": []}
+import time, uuid, urllib
+import hmac, hashlib
+from base64 import b64encode
+import json
 
-    def start_element(name, attrs):
-        if name == "yweather:location":
-            weather["city"] = weather["city"] + attrs["city"]
-            weather["city"] = weather["city"] + " " + attrs["country"]
-        if name == "yweather:forecast":
-            forecast = {}
-            forecast["date"] = attrs["date"]
-            forecast["day"] = attrs["day"]
-            forecast["high"] = attrs["high"]
-            forecast["low"] = attrs["low"]
-            forecast["text"] = attrs["text"]
-            weather["forecast"].append(forecast)
-        if name == "pubDate":
-            nonlocal flag
-            flag = True
-   
-    def char_data(text):
-        nonlocal flag
-        if flag:
-            weather["pubdate"] = text
-            flag = False
 
-    parser = ParserCreate()
-    parser.StartElementHandler = start_element
-    parser.CharacterDataHandler = char_data
-    parser.Parse(data)
-    return weather
+def get_weather(city_name):
+    """
+    Basic info    Richmond  Vancouver  Burnaby
+    """
+    url = 'https://weather-ydn-yql.media.yahoo.com/forecastrss'
+    method = 'GET'
+    app_id = 'Xjni966u'
+    consumer_key = 'dj0yJmk9VXJvMlJZc3cwUEozJnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTJh'   # Key
+    consumer_secret = '124c37555e3a8d3e847d0421bd1d4f937c1cc8d3'   # 秘钥
+    concat = '&'
+    query = {'location': '{0},ca'.format(city_name), 'format': 'json'}   # 地址
+    oauth = {
+        'oauth_consumer_key': consumer_key,
+        'oauth_nonce': uuid.uuid4().hex,
+        'oauth_signature_method': 'HMAC-SHA1',
+        'oauth_timestamp': str(int(time.time())),
+        'oauth_version': '1.0'
+    }
 
-def print_weather(weather):
-    with open(file_name, "a") as f:
-        s = "City: %s\nPub date: %s" %(weather["city"], weather["pubdate"])
-        print("%s" %(weather["city"]))
-        f.write(s + "\n")
-        for forecast in weather["forecast"]:
-            date = datetime.strptime(forecast["date"], "%d %b %Y").strftime("%Y-%m-%d")
-            s = "Date: %s High: %s Low: %s Weather: %s" %(date, forecast["high"], forecast["low"], forecast["text"])
-            f.write(s + "\n")
-        f.write("\n")
+    """
+    Prepare signature string (merge all params and SORT them)
+    """
+    merged_params = query.copy()
+    merged_params.update(oauth)
+    sorted_params = [k + '=' + urllib.request.quote(merged_params[k], safe='') for k in sorted(merged_params.keys())]
+    signature_base_str =  method + concat + urllib.request.quote(url, safe='') + concat + urllib.request.quote(concat.join(sorted_params), safe='')
 
-citys = ["2151330", "2151849", "44418", "615702", "2514815"]
-for city in citys:
-    url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20%3D%20"
-    url = url + city
-    url = url + "&format=xml"
-    with request.urlopen(url, timeout=4) as f:
-        weather = yahoo_weather(f.read())
-        print_weather(weather)
-print("weather conditions has written to %s" %(file_name))
+    """
+    Generate signature
+    """
+    composite_key = urllib.request.quote(consumer_secret, safe='') + concat
+    #oauth_signature = b64encode(hmac.new(composite_key, signature_base_str, hashlib.sha1).digest())
+    oauth_signature = str(b64encode(hmac.new(bytes(composite_key,'utf-8'), bytes(signature_base_str,'utf-8'), hashlib.sha1).digest()),'utf-8')
+
+
+    """
+    Prepare Authorization header
+    """
+    oauth['oauth_signature'] = oauth_signature
+    auth_header = 'OAuth ' + ', '.join(['{}="{}"'.format(k,v) for k,v in oauth.items()])
+
+    """
+    Send request
+    """
+    url = url + '?' + urllib.parse.urlencode(query)
+    request = urllib.request.Request(url)
+    request.add_header('Authorization', auth_header)
+    request.add_header('X-Yahoo-App-Id', app_id)
+    
+    try:
+        response = str(urllib.request.urlopen(request).read(),'utf-8')
+
+        js_data = json.loads(response)
+        weather_msg = ''
+
+        weather_msg += '城市：' + js_data['location']['city'] + '\n'
+        #weather_msg += '天气：{0}° {1}'.format(f_to_c(js_data['current_observation']['condition']['temperature']), js_data['current_observation']['condition']['text']) + '\n'
+        weather_msg += '今天天气：{0}°- {1}° {2}'.format(f_to_c(js_data['forecasts'][0]['low']), f_to_c(js_data['forecasts'][0]['high']), js_data['forecasts'][0]['text']) + '\n'
+        weather_msg += '明天天气：{0}°- {1}° {2}'.format(f_to_c(js_data['forecasts'][1]['low']), f_to_c(js_data['forecasts'][1]['high']), js_data['forecasts'][1]['text']) + '\n'
+        weather_msg += '后天天气：{0}°- {1}° {2}'.format(f_to_c(js_data['forecasts'][2]['low']), f_to_c(js_data['forecasts'][2]['high']), js_data['forecasts'][2]['text']) + '\n'
+
+        return weather_msg
+    except Exception as ex:
+        return ''
+
+
+def f_to_c(f):
+    '''华氏度 -> 摄氏度
+    
+    F=C×1.8+32
+    C=(F-32)÷1.8
+    '''
+    c = (int(f) - 32) / 1.8
+    return int(c)
+
+
+#if __name__ == "__main__":
+#    get_weather('Vancouver'.lower())
